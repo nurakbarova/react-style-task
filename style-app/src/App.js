@@ -1,6 +1,6 @@
 import Meta from 'antd/es/card/Meta';
 import './App.css';
-import { Card } from 'antd';
+import { Card, Col, Row, Space } from 'antd';
 import { useEffect, useState } from 'react';
 import { Content } from 'antd/es/layout/layout';
 
@@ -17,15 +17,21 @@ const App = () => {
 
   return (
     supplier.map((photos) => (
-      <Card
-        hoverable
-        style={{
-          width: 240,
-        }}
-        cover={<img alt="example" src={photos.url} />}
-      >
-        <Meta title={photos.title} />
-      </Card>
+      <Space style={{ display:'block',width: '90%',margin:'0 auto' }}>
+        <Row gutter={[20, 30]}>
+          <Col >
+            <Card
+              hoverable
+              style={{
+                width: "240px",
+              }}
+              cover={<img alt="example" src={photos.url} />}
+            >
+              <Meta title={photos.title} />
+            </Card>
+          </Col>
+        </Row>
+      </Space>
 
     ))
   )
