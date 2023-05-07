@@ -2,6 +2,7 @@ import Meta from 'antd/es/card/Meta';
 import './App.css';
 import { Card } from 'antd';
 import { useEffect, useState } from 'react';
+import { Content } from 'antd/es/layout/layout';
 
 const App = () => {
   const [supplier, setSupplier] = useState([]);
@@ -26,7 +27,7 @@ const App = () => {
         <Meta title={photos.title} />
       </Card>
 
-      ))
+    ))
   )
-    }
-  export default App;
+}
+export default App;
