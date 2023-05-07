@@ -10,22 +10,23 @@ const App = () => {
       .then((res) => res.json())
       .then((data) => {
         setSupplier(data)
-        console.log(data);
       })
   }, [])
-}
-data.foreach(photos =>{
-  return (<Card
-    hoverable
-    style={{
-      width: 240,
-    }}
-    cover={<img alt="example" src="{photos.url}" />}
-  >
 
-    <Meta title="{photos.title}" description="www.instagram.com" />
-  </Card>
+
+  return (
+    supplier.map((photos) => (
+      <Card
+        hoverable
+        style={{
+          width: 240,
+        }}
+        cover={<img alt="example" src={photos.url} />}
+      >
+        <Meta title={photos.title} />
+      </Card>
+
+      ))
   )
-
-})
-export default App;
+    }
+  export default App;
